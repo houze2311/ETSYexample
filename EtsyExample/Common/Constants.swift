@@ -17,7 +17,7 @@ enum Constants {
   
   enum Etsy {
     
-    static let apiKey = "btlcoly8wtgseiid2xuw4izt"
+    static let apiKey = "3tx6xl44mcovsoo8opoq0z0z"
     
   }
   
