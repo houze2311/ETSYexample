@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Items View Controller-->
+        <scene sceneID="EcR-vK-byi">
+            <objects>
+                <viewController storyboardIdentifier="ItemsViewController" id="qLL-dr-XQ2" customClass="ItemsViewController" customModule="EtsyExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aap-KK-9af">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DpZ-0d-7ac">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                <color key="separatorColor" red="0.67843137249999996" green="0.68235294120000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qLL-dr-XQ2" id="P8D-bu-aY9"/>
+                                    <outlet property="delegate" destination="qLL-dr-XQ2" id="YRU-bq-eYq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X3F-Ow-CPa" firstAttribute="trailing" secondItem="DpZ-0d-7ac" secondAttribute="trailing" id="QUy-b0-e9K"/>
+                            <constraint firstItem="DpZ-0d-7ac" firstAttribute="leading" secondItem="X3F-Ow-CPa" secondAttribute="leading" id="W4g-L7-QJt"/>
+                            <constraint firstItem="DpZ-0d-7ac" firstAttribute="top" secondItem="aap-KK-9af" secondAttribute="top" id="ZRC-sc-e5v"/>
+                            <constraint firstItem="X3F-Ow-CPa" firstAttribute="bottom" secondItem="DpZ-0d-7ac" secondAttribute="bottom" id="qe0-Bl-JSi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X3F-Ow-CPa"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="DpZ-0d-7ac" id="Gqk-aK-Il4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9X-V0-2py" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="217.24137931034485"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="Yob-Ff-5H0">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" automaticallyAdjustsScrollViewInsets="NO" id="UZH-3e-5ID" customClass="SearchViewController" customModule="EtsyExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tjz-4C-JdW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fw-d5-C7s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                <color key="tintColor" red="0.0" green="0.57647058819999997" blue="0.69803921570000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="pAe-nz-RPI"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="UZH-3e-5ID" id="jsg-8d-em6"/>
+                                    <outlet property="delegate" destination="UZH-3e-5ID" id="oA6-8x-6Nb"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Teg-3l-QWM" customClass="InsetTextField" customModule="EtsyExample" customModuleProvider="target">
+                                <rect key="frame" x="30" y="236" width="315" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4gF-Ac-JOE"/>
+                                </constraints>
+                                <color key="textColor" red="0.074509803920000006" green="0.074509803920000006" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" keyboardAppearance="light" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderUIColor">
+                                        <color key="value" red="0.67843137249999996" green="0.68235294120000001" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="UZH-3e-5ID" id="sYe-HK-DUI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrg-mA-xph">
+                                <rect key="frame" x="30" y="290" width="315" height="44"/>
+                                <color key="backgroundColor" red="0.26274509800000001" green="0.69411764710000001" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6FU-sE-ewq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="UZH-3e-5ID" eventType="touchUpInside" id="bCr-NP-KDS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Teg-3l-QWM" firstAttribute="top" secondItem="kmX-sa-MeU" secondAttribute="top" constant="236" id="1hj-bP-GLk"/>
+                            <constraint firstItem="kmX-sa-MeU" firstAttribute="trailing" secondItem="Zrg-mA-xph" secondAttribute="trailing" constant="30" id="Aa4-y1-9Df"/>
+                            <constraint firstItem="7fw-d5-C7s" firstAttribute="leading" secondItem="kmX-sa-MeU" secondAttribute="leading" id="BdF-cp-Pbw"/>
+                            <constraint firstItem="kmX-sa-MeU" firstAttribute="trailing" secondItem="7fw-d5-C7s" secondAttribute="trailing" id="CMx-WX-1vo"/>
+                            <constraint firstItem="7fw-d5-C7s" firstAttribute="top" secondItem="kmX-sa-MeU" secondAttribute="top" id="PhA-iE-V4w"/>
+                            <constraint firstItem="Zrg-mA-xph" firstAttribute="leading" secondItem="kmX-sa-MeU" secondAttribute="leading" constant="30" id="W4r-Td-11a"/>
+                            <constraint firstItem="kmX-sa-MeU" firstAttribute="trailing" secondItem="Teg-3l-QWM" secondAttribute="trailing" constant="30" id="ZaG-xN-hyP"/>
+                            <constraint firstItem="Teg-3l-QWM" firstAttribute="leading" secondItem="kmX-sa-MeU" secondAttribute="leading" constant="30" id="azB-iq-ZIR"/>
+                            <constraint firstItem="Zrg-mA-xph" firstAttribute="top" secondItem="Teg-3l-QWM" secondAttribute="bottom" constant="20" id="ezn-bD-WbK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kmX-sa-MeU"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pickerView" destination="7fw-d5-C7s" id="p1c-oQ-6o8"/>
+                        <outlet property="searchButton" destination="Zrg-mA-xph" id="2tE-A7-JzX"/>
+                        <outlet property="searchItemTextField" destination="Teg-3l-QWM" id="dBD-2q-TmN"/>
+                        <outlet property="searchItemTextFieldTopConstraint" destination="1hj-bP-GLk" id="4wn-ds-0nT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snB-uV-LGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.40000000000001" y="181.25937031484258"/>
+        </scene>
+        <!--Feed View Controller-->
+        <scene sceneID="dgR-ml-xm2">
+            <objects>
+                <viewController storyboardIdentifier="FeedViewController" automaticallyAdjustsScrollViewInsets="NO" id="aKy-Q6-XYu" customClass="FeedViewController" customModule="EtsyExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qc8-Le-Rfb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lOZ-Io-0ao">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="Ptr-BW-kxs">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aKy-Q6-XYu" id="oyH-NL-bKn"/>
+                                    <outlet property="delegate" destination="aKy-Q6-XYu" id="FmZ-CV-B15"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lOZ-Io-0ao" firstAttribute="leading" secondItem="SSp-2g-gGk" secondAttribute="leading" id="0Gm-cK-h9p"/>
+                            <constraint firstItem="SSp-2g-gGk" firstAttribute="trailing" secondItem="lOZ-Io-0ao" secondAttribute="trailing" id="cI6-tI-Z2D"/>
+                            <constraint firstItem="lOZ-Io-0ao" firstAttribute="top" secondItem="Qc8-Le-Rfb" secondAttribute="top" id="hEU-8C-eEA"/>
+                            <constraint firstItem="SSp-2g-gGk" firstAttribute="bottom" secondItem="lOZ-Io-0ao" secondAttribute="bottom" id="ndT-fd-msd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SSp-2g-gGk"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="lOZ-Io-0ao" id="z8c-pn-efV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sVg-Zd-s5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="550" y="181"/>
+        </scene>
+    </scenes>
+</document>

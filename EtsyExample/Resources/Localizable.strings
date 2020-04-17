@@ -1,0 +1,44 @@
+//
+//  Localizable.strings
+//  EtsyExample
+//
+//  Created by Dmitriy Demchenko on 1/3/17.
+//  Copyright © 2017 Dmitriy Demchenko. All rights reserved.
+//
+
+// Search
+"search.title" = "Search";
+"search.tabbar.title" = "Search";
+"search.button.title" = "Submit";
+"search.placeholder.text" = "What are you shopping for?";
+
+"search.hud.start_load_categories.text" = "Loading categories...";
+"search.hud.end_load_categories.text" = "Categories loaded!";
+
+"search.category_name.validation_error" = "Select a category";
+"search.keywords.validation_error" = "Entered Text can't be empty";
+
+// Feed
+"feed.hud.start_load_items.text" = "Loading items...";
+"feed.hud.end_load_items.text" = "Items loaded!";
+"feed.hud.no_available_item.text" = "No available item";
+"feed.placheholder.no_items.text" = "There are nobody in category";
+
+// Items
+"items.title" = "Saved Items";
+"items.tabbar.title" = "Saved Items";
+"items.placheholder.no_saved_items.text" = "There are nobody in saved items";
+
+// Details
+"details.hud.success_save_item.text" = "Item saved in the data base";
+"details.hud.success_remove_item.text" = "Item removed from the data base";
+"details.title" = "Details";
+
+// HUDs
+"alert.default_error_tile" = "Error";
+"alert.default_success_tile" = "Success";
+"alert.default_info_tile" = "Information";
+
+// Common Buttons
+"common_buttons.save_button.title" = "Save";
+"common_buttons.ok_button.title" = "OK";

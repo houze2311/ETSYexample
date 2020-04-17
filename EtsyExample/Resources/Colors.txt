@@ -1,0 +1,8 @@
+defaultBlackColor: #131313
+defaultBlueColor: #1692B3
+defaultGrayColor: #ADAEAA
+defaultOrangeColor: #FC6923
+mainTextColor: #545454
+mainBackgroundColor: #F5F5F1
+tabBarBackgroundColor: #FCFCFC
+priceTextColor: #7ABE4A
